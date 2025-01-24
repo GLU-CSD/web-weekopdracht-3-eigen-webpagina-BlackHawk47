@@ -1,4 +1,242 @@
-body{
-    background-color: black;
+/* General Styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, #0b0b0b, #1a1a1a, #2b2b2b);
     color: white;
+    line-height: 1.6;
+    animation: gradientFlow 15s infinite;
+    overflow-x: hidden;
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(90deg, #ff0055, #ff5500);
+    border-bottom: 4px solid #ff0055;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    animation: fadeInSlideDown 1.5s ease-out;
+}
+
+header h1 {
+    font-size: 4rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+header p {
+    font-size: 1.3rem;
+    color: #ffe;
+    margin-top: 0.5rem;
+}
+
+@keyframes fadeInSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* About Section */
+.about {
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    color: #ddd;
+    padding: 3rem;
+    text-align: center;
+    border-bottom: 4px solid #ff0055;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+.about h2 {
+    font-size: 3rem;
+    color: #ff5500;
+    margin-bottom: 1.5rem;
+    animation: pulseGlow 3s infinite;
+}
+
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 10px #ff5500, 0 0 20px #ff0055;
+    }
+
+    50% {
+        text-shadow: 0 0 20px #ff5500, 0 0 40px #ff0055;
+    }
+}
+
+.about p {
+    font-size: 1.3rem;
+    margin: 0 auto;
+    line-height: 1.8;
+    max-width: 800px;
+    color: #ccc;
+}
+
+/* Tracks Section */
+.tracks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 3rem;
+    background: linear-gradient(to bottom, #222, #111);
+}
+
+.track {
+    background: #262626;
+    border: 2px solid #ff0055;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1.5s ease;
+}
+
+.track:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.track img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #ff0055;
+}
+
+.track h2 {
+    font-size: 1.8rem;
+    margin: 1rem 0 0.5rem;
+    color: #ff5500;
+}
+
+.track p {
+    padding: 0 1rem 1rem;
+    font-size: 1rem;
+    color: #bbb;
+}
+
+.track a,
+.track button {
+    display: inline-block;
+    margin: 1rem 0.5rem;
+    padding: 0.7rem 1.5rem;
+    background: linear-gradient(90deg, #ff0055, #ff5500);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.track a:hover,
+.track button:hover {
+    background: linear-gradient(90deg, #ff5500, #ff0055);
+    transform: translateY(-2px);
+}
+
+.timer {
+    font-size: 1rem;
+    color: #ffcccb;
+    margin-top: 0.5rem;
+    font-style: italic;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Social Links */
+.social-links {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.social-links a {
+    margin: 0 1.5rem;
+    color: #ff0055;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #e6004d;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: #1a1a1a;
+    color: #888;
+    border-top: 4px solid #ff0055;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.track {
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.track:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 15px 40px rgba(255, 0, 85, 0.7);
+}
+
+.track:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+.track img {
+    transition: transform 0.3s ease, filter 0.3s ease;
 }

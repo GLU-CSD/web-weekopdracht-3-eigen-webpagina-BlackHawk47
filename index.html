@@ -4,116 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blackhawk0318's New Tracks</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #0d0d0d, #3b3b3b);
-            color: white;
-        }
-        header {
-            text-align: center;
-            padding: 2rem;
-            background: #1a1a1a;
-            border-bottom: 4px solid #ff0055;
-        }
-        header h1 {
-            font-size: 3rem;
-            margin: 0;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        header p {
-            font-size: 1.2rem;
-            color: #ccc;
-        }
-        .tracks {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2rem;
-            padding: 2rem;
-        }
-        .track {
-            background: #262626;
-            border: 2px solid #ff0055;
-            border-radius: 10px;
-            overflow: hidden;
-            width: 300px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            text-align: center;
-        }
-        .track img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .track h2 {
-            font-size: 1.5rem;
-            margin: 1rem 0 0.5rem;
-            color: #ff0055;
-        }
-        .track p {
-            padding: 0 1rem 1rem;
-            font-size: 1rem;
-            color: #bbb;
-        }
-        .track a, .track button {
-            display: inline-block;
-            margin: 1rem 0.5rem;
-            padding: 0.5rem 1rem;
-            background: #ff0055;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            text-transform: uppercase;
-            border: none;
-            cursor: pointer;
-        }
-        .track a:hover, .track button:hover {
-            background: #e6004d;
-        }
-        .timer {
-            font-size: 0.9rem;
-            color: #ffcccb;
-        }
-        .social-links {
-            text-align: center;
-            margin: 2rem 0;
-        }
-        .social-links a {
-            margin: 0 1rem;
-            color: #ff0055;
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-        .social-links a:hover {
-            color: #e6004d;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background: #1a1a1a;
-            color: #888;
-            border-top: 4px solid #ff0055;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <script src="main.js"></script>
+
     <header>
-        <h1>Welcome to Blackhawk0318's Music</h1>
+        <h1>Welcome to My Music</h1>
         <p>Discover my latest tracks and feel the beats!</p>
     </header>
+
+    <section class="about">
+        <h2>About Me</h2>
+        <p>
+            Hey there! I'm <strong>Blackhawk0318</strong>, a passionate music producer and sound designer. My journey in the world of music started from a deep love for melodies and rhythms. Over the years, I've crafted unique tracks that resonate with a variety of emotions, from electrifying beats to soothing harmonies.
+        </p>
+        <p>
+            My goal is to connect with listeners through music that inspires, energizes, and uplifts. Whether you're here to pump up your day or find a moment of tranquility, there's something for everyone. Thank you for being part of my musical adventure!
+        </p>
+    </section>
 
     <main class="tracks">
         <div class="track">
             <img src="assets/Rise and Conquer.png" alt="Rise and Conquer">
             <h2>Rise and Conquer</h2>
             <p>An exciting and energetic track you don't want to miss.</p>
-            <a href="https://soundcloud.com/blackhawk0318/rise-and-conquer?si=7602f9af56d14311863f4ef05feb76aa&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing">Listen Now</a>
+            <a href="https://soundcloud.com/blackhawk0318/rise-and-conquer">Listen Now</a>
             <button onclick="playAudio('assets/Rise_and_Conquer.mp3', this)">Play</button>
             <span class="timer" id="timer-1"></span>
         </div>
@@ -121,28 +37,31 @@
             <img src="assets/Unstopable force.png" alt="Unstoppable Force">
             <h2>Unstoppable Force</h2>
             <p>Experience a unique musical journey with these melodies.</p>
-            <a href="https://soundcloud.com/blackhawk0318/unstoppable-force?si=67aa6afa010a4b8aaeaf41becfaf569b&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing">Listen Now</a>
-            <button onclick="playAudio('assets/Unstoppable_Force.mp3', this)">Play</button>
+            <a href="https://soundcloud.com/blackhawk0318/unstoppable-force">Listen Now</a>
+            <button onclick="playAudio('assets/Unstoppable Force.mp3', this)">Play</button>
             <span class="timer" id="timer-2"></span>
         </div>
         <div class="track">
             <img src="assets/Screenshot 2025-01-21 145417.png" alt="We will fight">
             <h2>We Will Fight</h2>
             <p>Let yourself be carried away by the rhythm of my latest creation.</p>
-            <a href="https://soundcloud.com/blackhawk0318/we-will-fight?si=ae2a41f9171c4ef4b12cf1146cc3e161&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing">Listen Now</a>
-            <button onclick="playAudio('assets/We_Will_Fight.mp3', this)">Play</button>
+            <a href="https://soundcloud.com/blackhawk0318/we-will-fight">Listen Now</a>
+            <button onclick="playAudio('assets/We will fight.mp3', this)">Play</button>
             <span class="timer" id="timer-3"></span>
         </div>
     </main>
 
-    <div class="social-links">
+    <section class="social-links">
+        <h2>Follow Me</h2>
+        <p>Stay connected and never miss a beat! Check out my social profiles below:</p>
         <a href="https://www.tiktok.com/@blackhawk0318" target="_blank">TikTok</a>
         <a href="https://soundcloud.com/blackhawk0318" target="_blank">SoundCloud</a>
         <a href="https://www.spotify.com" target="_blank">Spotify</a>
-    </div>
+    </section>
 
     <footer>
         <p>&copy; 2025 Blackhawk0318. All rights reserved.</p>
+        <p>Thank you for visiting! Keep the music alive and let it move you.</p>
     </footer>
 
     <script>
